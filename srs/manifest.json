@@ -2,7 +2,10 @@
   "name": "Recent Tabs Master",
   "description": "Switching to previous active tabs through the list of recent tabs, complementing the Recent Tabs Forward, Recent Tabs Fast Forward",
   "version": "1.0",
-  "options_page": "options_ui.html",
+  "options_ui": {
+    "page": "options_ui.html",
+    "open_in_tab": true
+  },
   "icons": {
     "16": "./icons/back_16.png",
     "32": "./icons/back_32.png",
