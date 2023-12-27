@@ -1,0 +1,79 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  max-width: 400px;
+  margin: 40px auto;
+}
+h1 {
+  color: #333;
+  text-align: center;
+}
+.setting {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.setting:not(:last-child) {
+  margin-bottom: 10px;
+}
+.setting input[type=number],
+.setting input[type=checkbox] {
+  margin-right: 10px; /* Space before the label */
+}
+.setting label {
+  color: #555;
+  font-size: 16px; /* Larger font size for labels */
+}
+input[type=number] {
+  width: 70px; /* Smaller width for numeric input */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+button {
+  background-color: #5c6bc0;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+button:hover {
+  background-color: #3f51b5;
+}
+
+#extensionIcon {
+  display: block;
+  margin: 0 auto;
+  max-width: 100px;
+  padding-bottom: 20px;
+}
+
+/* Additional styles for Donate button */
+.donate-button {
+  background-color: #ff9800; /* Warm color for donation button */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.donate-button:hover {
+  background-color: #fb8c00; /* Slightly darker shade on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}

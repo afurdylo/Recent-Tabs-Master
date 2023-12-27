@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extension Settings Page</title>
+  <link rel="stylesheet" href="opt-style.css">
+</head>
+<body>
+  <div class="container">
+    <img src="./icons/back_128.png" alt="Extension Icon" id="extensionIcon"/>
+    <h1>Recent Tabs Master Settings</h1>
+    <div class="setting">
+      <input type="number" id="maxTabs" name="maxTabs" min="1" max="200">
+      <label for="maxTabs">Number of processed tabs (1-200):</label>
+    </div>
+    <div class="setting">
+      <input type="checkbox" id="filterDuplicates" name="filterDuplicates">
+      <label for="filterDuplicates">Remove duplicated tabs from the list</label>
+    </div>
+    <button id="saveSettings">Save Settings</button>
+    <button id="keybindings">Configure Keybindings</button>
+    <button id="donate" class="donate-button">Donate</button>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

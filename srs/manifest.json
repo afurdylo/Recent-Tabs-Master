@@ -1,0 +1,52 @@
+{
+  "name": "Recent Tabs Master",
+  "description": "Switching to previous active tabs through the list of recent tabs, complementing the Recent Tabs Forward, Recent Tabs Fast Forward",
+  "version": "1.0",
+  "options_page": "options_ui.html",
+  "icons": {
+    "16": "./icons/back_16.png",
+    "32": "./icons/back_32.png",
+    "48": "./icons/back_48.png",
+    "128": "./icons/back_128.png"
+  },
+  "manifest_version": 3,
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAilj/DRaZqazYYISNh6E6ZkNd+Ca4B5FdHoM61EKHKxfGHmrnfPWsrpPd2Ss6pt7amQxB15aEuUV+7PexCS63359s5xSQaAqCTzlu7/x3CCsQMZgwFZgBCXdW18k6B7spx617BhjMB/RSrvWxdCrT/zC77P26LLsmBrEJZ6VP5BmZega+T5wBitLrC1pRgq/zAm9fFk4cbXAnbbZS6NJsIEx2qqh5LJe1j6V+Ogb4zrGApYG+JiCfkTT3bZe/BxTppITB4obhF0QyJW3Bmk50cJAi/oSMCBWnAGFAsEHB/eWmg65j2kT6GRnmFiUrionn+SBSmuqyj+MOPwZ4gm3GqwIDAQAB",
+  "action": {},
+  "permissions": [
+    "contextMenus",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "Recent-Tabs-Master.js",
+    "type": "module"
+  },
+  "externally_connectable": {
+    "ids": [
+      "dpnndineanlmfogoccoffnbljfcpebol",
+      "kdiokjemgpcccpfemfcbkhfddjjmipfb"
+    ]
+  },
+  "commands": {
+    "switch-to-previously-active-tab": {
+      "suggested_key": {
+        "default": "Ctrl+Y",
+        "mac": "Command+Y"
+      },
+      "description": "Switch to the previously active tab"
+    },
+    "switch-to-next-active-tab": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Switch to the next active tab in stack"
+    },
+    "fast-forward-tabs-stack": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "Command+Shift+F"
+      },
+      "description": "Fast forward tabs stack"
+    }
+  }
+}
