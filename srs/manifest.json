@@ -1,7 +1,7 @@
 {
   "name": "Recent Tabs Master",
   "description": "Switching to previous active tabs through the list of recent tabs, complementing the Recent Tabs Forward, Recent Tabs Fast Forward",
-  "version": "1.0",
+  "version": "1.1",
   "options_ui": {
     "page": "options_ui.html",
     "open_in_tab": true

@@ -19,6 +19,12 @@
 3. Click "Add to Chrome" for each extension.
 4. Once installed, you will see their icons on your Chrome toolbar.
 
+## Chrome store links:
+- Recent Tabs Master - https://chromewebstore.google.com/detail/recent-tabs-master/igpepgofglnhfpmgbcjkndcfjemhoaac
+- Recent Tabs Forward - https://chromewebstore.google.com/detail/recent-tabs-forward/dpnndineanlmfogoccoffnbljfcpebol
+- Recent Tabs Fast Forward - https://chromewebstore.google.com/detail/recent-tabs-fast-forward/kdiokjemgpcccpfemfcbkhfddjjmipfb
+
+
 ## How to Use
 
 ### Switching to the Previous Tab:
