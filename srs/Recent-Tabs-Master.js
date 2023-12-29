@@ -12,8 +12,7 @@ const extensionSettings = {
 };
 
 const settingsProvider = new SettingsProvider(extensionSettings);
-const chromeWindowsManager = new ChromeWindowsManager(settingsProvider.getSettings());
-
+const chromeWindowsManager = new ChromeWindowsManager(() => settingsProvider.getSettings());
 
 chrome.tabs.onActivated.addListener(async ({ tabId, windowId }) => {
   chromeWindowsManager.onActivatedTab(windowId, tabId);
@@ -69,7 +68,6 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 });
 
 chrome.tabs.onReplaced.addListener((addedTabId, removedTabId) => {
-  console.log("onReplaced", addedTabId, removedTabId);
   chromeWindowsManager.replaceTab(removedTabId, addedTabId);
 });
 

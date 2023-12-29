@@ -12,6 +12,7 @@ export class SettingsProvider {
 
   initializeSettings() {
     chrome.storage.local.get(Object.keys(this.settings), (items) => {
+      // console.log("Settings loaded:", JSON.stringify(items || {}, null, 2))
       let settingsToInitialize = {};
       let shouldInitialize = false;
       for (let key in this.settings) {

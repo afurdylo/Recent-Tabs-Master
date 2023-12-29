@@ -4,15 +4,15 @@ import { chromeClearIconsMenuBages } from './chrome-utils.js';
 
 
 export class ChromeWindowsManager {
-  constructor(settings) {
-    this.windowsStorage = new ObjectsStorage("windowsStorage", TabManager, settings);
-    this.settings = settings;
+  constructor(getSettings) {
+    this.windowsStorage = new ObjectsStorage("windowsStorage", TabManager, getSettings);
+    this.getSettings = getSettings;
   }
  
   async onActivatedTab(windowId, tabId){
     const windows = await this.windowsStorage.getDataObject();
     if(!(windowId in windows)){
-      windows[windowId] = new TabManager(this.settings);
+      windows[windowId] = new TabManager(this.getSettings);
     }
     windows[windowId].activateTab(tabId);
     this.updateIconsMenuBages(windowId, tabId);

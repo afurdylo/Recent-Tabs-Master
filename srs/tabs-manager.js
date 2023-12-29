@@ -2,12 +2,12 @@ import { chromeUpdateIconsMenuBages } from './chrome-utils.js';
 
 
 export class TabManager {
-  constructor(settings) {
+  constructor(getSettings) {
     this.tabs = [];
     this.tabs_back = [];
     this.tabs_forward = [];
     this.activatedTabId = null;
-    this.settings = settings;
+    this.getSettings = getSettings;
     this.switchingTime = null;
   }
 
@@ -28,7 +28,7 @@ export class TabManager {
     }
 
     if (this.tabs[this.tabs.length - 1] != tabId) {
-      if(this.settings.filterDuplicates){
+      if(this.getSettings().filterDuplicates){
         this.tabs = this.tabs.filter(element => element !== tabId);
       }
 
@@ -38,8 +38,8 @@ export class TabManager {
   }
 
   _limitMaxTabsNum() {
-    if (this.tabs.length > this.settings.maxTabs + 1) {
-      let start = this.tabs.length - this.settings.maxTabs - 1;
+    if (this.tabs.length > this.getSettings().maxTabs + 1) {
+      let start = this.tabs.length - this.getSettings().maxTabs - 1;
       this.tabs = this.tabs.slice(start);
     }
   }
